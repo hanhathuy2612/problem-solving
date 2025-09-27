@@ -1,4 +1,4 @@
-package com.hnh.study.problem_solving.maximum_sum_subarray_of_size_k;
+package com.hnh.study.problem_solving.slide_window.maximum_sum_subarray_of_size_k;
 
 import java.util.Arrays;
 

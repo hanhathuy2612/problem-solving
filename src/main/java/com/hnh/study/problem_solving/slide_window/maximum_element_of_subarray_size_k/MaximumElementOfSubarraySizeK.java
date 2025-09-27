@@ -1,4 +1,4 @@
-package com.hnh.study.problem_solving.maximum_element_of_subarray_size_k;
+package com.hnh.study.problem_solving.slide_window.maximum_element_of_subarray_size_k;
 
 import java.util.Arrays;
 

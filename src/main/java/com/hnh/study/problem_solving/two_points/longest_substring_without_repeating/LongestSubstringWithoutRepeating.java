@@ -1,4 +1,6 @@
-package com.hnh.study.problem_solving.longest_substring_without_repeating;
+package com.hnh.study.problem_solving.two_points.longest_substring_without_repeating;
+
+import java.util.Arrays;
 
 public class LongestSubstringWithoutRepeating {
     public static void main(String[] args) {
@@ -8,6 +10,8 @@ public class LongestSubstringWithoutRepeating {
 
     static String longestSubstringWithoutRepeating(String str) {
         int[] track = new int[128];
+        Arrays.fill(track, -1);
+
         int left = 0, best = 0;
         int start = 0;
         for (int right = 0; right < str.length(); right++) {
@@ -16,9 +20,10 @@ public class LongestSubstringWithoutRepeating {
                 left = track[ch] + 1;
             }
             track[ch] = right;
-            if (right - left + 1 > best) {
-                best = right - left + 1;
-                start = left - 1;
+            int len = right - left + 1;
+            if (len > best) {
+                start = left;
+                best = len;
             }
         }
         System.out.println("left: " + start + ", best: " + best);

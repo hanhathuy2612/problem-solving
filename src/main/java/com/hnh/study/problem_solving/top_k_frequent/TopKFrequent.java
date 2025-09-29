@@ -3,6 +3,15 @@ package com.hnh.study.problem_solving.top_k_frequent;
 import java.util.*;
 
 public class TopKFrequent {
+    /**
+     * Find the top k most frequent elements in the array.
+     * Time: O(N log k)
+     * Space: O(N)
+     *
+     * @param nums input array
+     * @param k    number of top frequent elements to find
+     * @return array of top k frequent elements
+     */
     public static int[] topKFrequent(int[] nums, int k) {
         if (nums.length == 0 || k == 0 || k > nums.length) {
             return new int[0];

@@ -10,7 +10,20 @@ public class LongestSubstringWithoutRepeating {
         System.out.println("Best Result: " + longestSubstringWithoutRepeating(str));
     }
 
+    /**
+     * Find the longest substring without repeating characters
+     * Sliding window + two pointers
+     * Time: O(n)
+     * Space: O(1)
+     *
+     * @param str input string
+     * @return Result object containing the longest substring and its length
+     */
     static Result longestSubstringWithoutRepeating(String str) {
+        // 1. Initialize an array to track the last index of each character
+        // 2. Use two pointers to represent the current window
+        // 3. Expand the right pointer and update the left pointer if a repeating character is found
+        // 4. Update the best length and starting index when a longer substring is found
         int[] track = new int[128];
         Arrays.fill(track, -1);
         List<Result> listResults = new ArrayList<>();
